@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Four-Corner Fact Check | WEHS Library Lyceum</title>
+<meta name="description" content="A weather-day gym game: students run to True, False, Unproven, or No Idea, then VAR shows who tested the claim.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WEHS Library Lyceum">
+<meta property="og:title" content="Four-Corner Fact Check | WEHS Library Lyceum">
+<meta property="og:description" content="A weather-day gym game: students run to True, False, Unproven, or No Idea, then VAR shows who tested the claim.">
+<meta property="og:url" content="https://mistertlibrary.github.io/deweyevenlift/fourcorners/">
+<meta property="og:image" content="https://mistertlibrary.github.io/librarylyceum/og-image.png">
+<link rel="canonical" href="https://mistertlibrary.github.io/deweyevenlift/fourcorners/">
+<link rel="icon" type="image/svg+xml" href="/librarylyceum/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/librarylyceum/favicon.png">
+<script>
+(function(){try{var d=document.documentElement,t=localStorage.getItem("lyceum-theme"),s=localStorage.getItem("lyceum-size"),f=localStorage.getItem("lyceum-font");if(t==="dark"||t==="contrast")d.dataset.theme=t;if(s==="medium"||s==="large")d.dataset.size=s;if(f==="sans"||f==="dyslexic")d.dataset.font=f}catch(e){}})();
+</script>
+<style>
+@font-face{font-family:"EB Garamond";font-style:normal;font-weight:400 800;font-display:swap;src:url("/librarylyceum/fonts/eb-garamond-400-800.woff2") format("woff2")}
+@font-face{font-family:"EB Garamond";font-style:italic;font-weight:400 800;font-display:swap;src:url("/librarylyceum/fonts/eb-garamond-400-800-italic.woff2") format("woff2")}
+@font-face{font-family:"Libre Franklin";font-style:normal;font-weight:100 900;font-display:swap;src:url("/librarylyceum/fonts/libre-franklin-100-900.woff2") format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-weight:600;font-display:swap;src:url("/librarylyceum/fonts/ibm-plex-mono-600.woff2") format("woff2")}
+@font-face{font-family:"OpenDyslexic";font-weight:400;font-display:swap;src:url("/librarylyceum/fonts/opendyslexic-400.woff2") format("woff2")}
+@font-face{font-family:"OpenDyslexic";font-weight:700;font-display:swap;src:url("/librarylyceum/fonts/opendyslexic-700.woff2") format("woff2")}
+:root,:root[data-theme="light"]{--paper:#f5f1ea;--card:#fffdf9;--ink:#1f1415;--muted:#5b4d4b;--line:#cfc4b8;--accent:#c52122;--accent-ink:#a81b1c;--on-accent:#fff;--band:#2f1414;--on-band:#f5f1ea;--focus:#1f5e7a;--field:#fff;--shadow:#1f1415}
+:root[data-theme="dark"]{--paper:#161112;--card:#211a1b;--ink:#f1e9e6;--muted:#c4b6b2;--line:#4d3f3e;--accent:#ff7466;--accent-ink:#ff8f84;--on-accent:#161112;--band:#0b0808;--on-band:#f1e9e6;--focus:#7cc4e4;--field:#130e0f;--shadow:#000}
+:root[data-theme="contrast"]{--paper:#000;--card:#000;--ink:#fff;--muted:#fff;--line:#fff;--accent:#ffe400;--accent-ink:#ffe400;--on-accent:#000;--band:#000;--on-band:#fff;--focus:#ffe400;--field:#000;--shadow:#000}
+:root{--fs:17px;--serif:"EB Garamond","Iowan Old Style",Palatino,Georgia,serif;--sans:"Libre Franklin","Franklin Gothic Medium",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--body:var(--serif);--display:var(--serif)}
+:root[data-size="medium"]{--fs:19px}
+:root[data-size="large"]{--fs:21.5px}
+:root[data-font="sans"]{--body:var(--sans);--display:var(--sans)}
+:root[data-font="dyslexic"]{--body:"OpenDyslexic",sans-serif;--display:"OpenDyslexic",sans-serif;--sans:"OpenDyslexic",sans-serif;--mono:"OpenDyslexic",monospace;--serif:"OpenDyslexic",sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:1rem}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 var(--fs)/1.6 var(--body);font-variant-numeric:lining-nums}
+:root[data-theme="contrast"] body{background-image:none}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.15;text-align:center;overflow-wrap:break-word;margin:0 0 .5em}
+p,li{overflow-wrap:break-word}
+a{color:var(--accent-ink);text-decoration:underline;text-underline-offset:.15em}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--card);color:var(--ink);padding:.6rem .9rem;border:2px solid var(--focus);font:600 .95rem var(--sans)}
+.skip:focus{left:1rem;top:1rem}
+.topbar{background:var(--band);color:var(--on-band);font:600 .78rem/1.4 var(--sans);text-align:center;padding:.5rem 1rem;letter-spacing:.02em}
+.topbar a{color:var(--on-band)}
+:root[data-theme="contrast"] .topbar{border-bottom:1px solid #fff}
+.foot{max-width:44rem;margin:3rem auto 0;padding:1.2rem 1rem 6rem;border-top:1px solid var(--line);text-align:center;font:400 .85rem/1.55 var(--sans);color:var(--muted)}
+.foot a{color:inherit}
+.foot .big{font:600 1rem/1.4 var(--display);color:var(--ink);margin:0 0 .2rem}
+:root[data-font="dyslexic"] .seg button[data-v="contrast"]{flex-basis:100%}
+.aa-btn{position:fixed;right:calc(1rem + env(safe-area-inset-right));bottom:calc(1rem + env(safe-area-inset-bottom));z-index:60;min-width:3rem;height:3rem;padding:0 .8rem;border-radius:999px;border:2px solid var(--ink);background:var(--card);color:var(--ink);font:700 1.05rem/1 var(--sans);cursor:pointer;box-shadow:3px 3px 0 var(--shadow)}
+.aa-panel{position:fixed;right:calc(1rem + env(safe-area-inset-right));bottom:calc(4.6rem + env(safe-area-inset-bottom));z-index:60;width:min(20rem,calc(100vw - 2rem));max-height:calc(100vh - 6rem);overflow:auto;background:var(--card);color:var(--ink);border:2px solid var(--ink);padding:.9rem 1rem;box-shadow:4px 4px 0 var(--shadow);font-family:var(--sans)}
+.aa-panel[hidden]{display:none}
+.aa-panel h2{font:700 .95rem/1.2 var(--sans);margin:0 0 .6rem}
+.aa-panel fieldset{border:0;margin:0 0 .75rem;padding:0;min-width:0}
+.aa-panel legend{font:700 .72rem/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.35rem;padding:0}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{flex:1 1 0;min-width:0;padding:.45rem .35rem;border:1.5px solid var(--ink);border-radius:.3rem;background:transparent;color:var(--ink);font:600 .85rem/1.2 var(--sans);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+:root[data-font="dyslexic"] .seg button{font-size:.72rem}
+:root[data-font="dyslexic"] .seg button[data-v="dyslexic"]{flex-basis:100%}
+:root[data-theme="contrast"] .aa-btn,:root[data-theme="contrast"] .aa-panel{box-shadow:none}
+.btn{display:inline-block;font:700 .95rem/1.2 var(--sans);padding:.65rem 1rem;border:2px solid var(--ink);border-radius:.3rem;background:var(--ink);color:var(--paper);cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print{
+.topbar,.aa-btn,.aa-panel,.skip,.noprint{display:none!important}
+:root,:root[data-theme]{--paper:#fff;--card:#fff;--ink:#000;--muted:#333;--line:#777;--accent:#000;--accent-ink:#000;--on-accent:#fff;--field:#fff;--shadow:#fff}
+body{font-size:11.5pt;background:#fff}
+a{color:#000}
+.foot{padding-bottom:0;margin-top:1.5rem}
+}
+
+@font-face{font-family:"Special Elite";font-weight:400;font-display:swap;src:url("/deweyevenlift/fonts/special-elite-400.woff2") format("woff2")}
+:root,:root[data-theme="light"]{--paper:#eef4f5;--card:#fffdf8;--muted:#4f4442;--line:#b9c9cf;--grid-minor:#d6e5ea;--grid-major:#b7d0d9;--manila:#ecd49c;--manila-edge:#b8954b;--water:#3d8db0;--ring:rgba(61,141,176,.34);--stamp:#b3191a;--index:#fffefb;--rule:#c9dcea;--margin-line:#e7a3a3;--note:#fff1a1;--note-strip:#f4df73;--note-ink:#1f1415;--tape:rgba(255,255,255,.62);--seal:#b3191a;--on-seal:#fff}
+:root[data-theme="dark"]{--paper:#0f2c44;--card:#153a57;--ink:#eef6fb;--muted:#b9cfdd;--line:#4d7898;--accent:#ff8f84;--accent-ink:#ffa39a;--field:#0c2337;--shadow:#06182a;--focus:#ffd56b;--grid-minor:rgba(150,205,240,.10);--grid-major:rgba(150,205,240,.22);--manila:#1f4c6f;--manila-edge:#8cc0de;--water:#6cc6ec;--ring:rgba(108,198,236,.30);--stamp:#ffa39a;--index:#173f5f;--rule:rgba(150,205,240,.22);--margin-line:rgba(255,143,132,.6);--note:#f1df7c;--note-strip:#e2cc5c;--note-ink:#1f1415;--tape:rgba(200,230,250,.22);--seal:#d9473f;--on-seal:#fff}
+:root[data-theme="contrast"]{--grid-minor:transparent;--grid-major:transparent;--manila:#000;--manila-edge:#fff;--water:#ffe400;--ring:transparent;--stamp:#ffe400;--index:#000;--rule:transparent;--margin-line:transparent;--note:#000;--note-strip:#000;--note-ink:#fff;--tape:transparent;--seal:#ffe400;--on-seal:#000}
+:root{--type:"Special Elite",var(--mono)}
+:root[data-font="dyslexic"]{--type:"OpenDyslexic",sans-serif}
+body{background-color:var(--paper);background-image:linear-gradient(var(--grid-major) 1px,transparent 1px),linear-gradient(90deg,var(--grid-major) 1px,transparent 1px),linear-gradient(var(--grid-minor) 1px,transparent 1px),linear-gradient(90deg,var(--grid-minor) 1px,transparent 1px);background-size:60px 60px,60px 60px,12px 12px,12px 12px}
+.folder{max-width:44rem;margin:2.6rem auto 0;padding:0 1rem}
+.folder-tab{display:inline-block;margin:0 0 -1.5px 1.2rem;padding:.45rem 1.1rem .35rem;background:var(--manila);border:1.5px solid var(--manila-edge);border-bottom:0;border-radius:.6rem .6rem 0 0;font:400 .95rem/1.2 var(--type);position:relative;z-index:1}
+.folder-body{position:relative;overflow:hidden;background:var(--manila);border:1.5px solid var(--manila-edge);border-radius:0 .6rem .6rem .6rem;padding:2.2rem 1.4rem 1.8rem;text-align:center;box-shadow:6px 6px 0 var(--manila-edge)}
+.folder-body::after{content:"";position:absolute;width:11rem;height:11rem;right:-2.6rem;top:-3rem;border-radius:50%;pointer-events:none;background:radial-gradient(circle,transparent 61%,var(--ring) 63%,transparent 67%,transparent 71%,var(--ring) 72%,transparent 74%)}
+.label{position:relative;display:inline-block;max-width:100%;background:var(--card);border:1px solid var(--manila-edge);padding:.9rem 1.3rem .8rem;margin:0 0 1.1rem}
+.label::before,.label::after{content:"";position:absolute;top:-.55rem;width:3.2rem;height:1.1rem;background:var(--tape);border:1px solid rgba(0,0,0,.06)}
+.label::before{left:-.9rem;transform:rotate(-24deg)}
+.label::after{right:-.9rem;transform:rotate(24deg)}
+.folder h1{font:400 clamp(1.85rem,6.4vw,2.9rem)/1.12 var(--type);margin:0;letter-spacing:.01em}
+.dek{font-style:italic;color:var(--ink);margin:0;position:relative}
+.sheet{position:relative;background:var(--card);border:1.5px solid var(--ink);padding:1.3rem 1.3rem;margin:2rem 0;box-shadow:5px 5px 0 -1.5px var(--card),5px 5px 0 0 var(--ink),10px 10px 0 -1.5px var(--card),10px 10px 0 0 var(--ink)}
+.clip{position:absolute;top:-1.6rem;left:1.4rem;width:1.5rem;height:4rem;color:var(--muted);transform:rotate(8deg)}
+:root[data-theme="contrast"] .sheet{box-shadow:none}
+:root[data-theme="contrast"] .folder-body{box-shadow:none}
+.sticky{background-color:var(--note);background-image:linear-gradient(var(--note-strip) 0 .55rem,transparent .55rem);color:var(--note-ink)}
+.sticky a{color:inherit}
+:root[data-theme="contrast"] .sticky{border:2px solid #ffe400}
+.typed{font-family:var(--type);font-weight:400}
+:root[data-theme="contrast"] .clip,:root[data-theme="contrast"] .label::before,:root[data-theme="contrast"] .label::after,:root[data-theme="contrast"] .folder-body::after{display:none}
+@media (max-width:34rem){.sheet{padding:1.1rem .9rem;box-shadow:4px 4px 0 -1.5px var(--card),4px 4px 0 0 var(--ink)}.folder-body{padding:1.8rem .9rem 1.4rem}}
+@media print{
+body{background:#fff}
+.clip,.label::before,.label::after,.folder-body::after{display:none!important}
+.folder-body,.sheet,.sticky,.folder-tab,.label{background:#fff!important;box-shadow:none!important}
+.folder-body{border:2px solid #000}
+.folder-tab,.label{border-color:#000!important}
+}
+
+
+:root,:root[data-theme="light"]{--paper:#f6f1e7;--grid-minor:#ebe0cc;--grid-major:#dccaa8;--court:rgba(197,33,34,.2);--board:#1d1b1a;--board-ink:#ffb31f;--board-dim:#b39b66;--tape-a:#fdfdf9;--tape-b:#ecebe2;--net:#5b4d4b}
+:root[data-theme="dark"]{--paper:#13181d;--card:#1c242c;--index:#1f2a33;--grid-minor:rgba(255,190,90,.07);--grid-major:rgba(255,190,90,.15);--court:rgba(255,143,132,.42);--manila:#3a3022;--manila-edge:#c9a86a;--board:#06090c;--board-ink:#ffbf3d;--board-dim:#b39b66;--tape-a:#d9d8cf;--tape-b:#c4c2b6;--net:#c4b6b2;--field:#10161b;--shadow:#05080b;--ring:rgba(255,190,90,.22)}
+:root[data-theme="contrast"]{--court:#fff;--board:#000;--board-ink:#ffe400;--board-dim:#fff;--tape-a:#000;--tape-b:#000;--net:#fff}
+.folder-body::after,.file-body::after{display:none}
+.court{position:absolute;inset:0;width:100%;height:100%;color:var(--court);pointer-events:none}
+:root[data-theme="contrast"] .court{display:none}
+.folder-body>*:not(.court){position:relative}
+.whistle{display:inline-block;width:1.35em;height:1em;vertical-align:-.12em;margin-right:.35em}
+.plate{display:flex;justify-content:space-between;align-items:baseline;gap:.6rem;margin:.45rem 0 0;padding:.35rem .6rem;background:var(--board);color:var(--board-ink);font:600 .8rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;border-radius:.2rem}
+.plate b{font:600 1.05rem/1 var(--mono);letter-spacing:.06em;text-shadow:0 0 .5em color-mix(in srgb,var(--board-ink) 45%,transparent)}
+:root[data-theme="contrast"] .plate{border:1.5px solid #fff}
+:root[data-theme="contrast"] .plate b{text-shadow:none}
+.tape{position:relative;color:#1f1415;background-color:var(--tape-a);background-image:repeating-linear-gradient(90deg,transparent 0 3px,var(--tape-b) 3px 4px),repeating-linear-gradient(0deg,transparent 0 3px,var(--tape-b) 3px 4px);clip-path:polygon(2% 0,98% 0,100% 15%,98% 30%,100% 45%,98% 60%,100% 75%,98% 90%,100% 100%,0 100%,2% 85%,0 70%,2% 55%,0 40%,2% 25%,0 10%);transform:rotate(-1.2deg);box-shadow:none}
+.tape a{color:inherit}
+:root[data-theme="dark"] .tape{color:#1f1415}
+:root[data-theme="contrast"] .tape{color:#fff;clip-path:none;transform:none;border:2px solid #ffe400}
+.wrap>h2{border-bottom:3px double var(--court)}
+:root[data-theme="contrast"] .wrap>h2{border-bottom-color:#fff}
+@media print{
+.court,.whistle{display:none!important}
+.plate{background:#fff!important;color:#000!important;border:1.5px solid #000;text-shadow:none}
+.plate b{text-shadow:none!important}
+.tape{clip-path:none!important;transform:none!important;background:#fff!important;border:2px solid #000}
+.wrap>h2{border-bottom-color:#000}
+}
+
+.wrap{max-width:52rem;margin:0 auto;padding:0 1rem}
+.folder.wide{max-width:52rem}
+.folder.wide h1{font-size:clamp(2rem,6.8vw,3.3rem)}
+.intro{font-size:1.08em}
+.intro p{margin:.3rem 0 .8rem;text-align:center}
+.corners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem;margin-top:1rem}
+.corner{border:1.5px solid var(--ink);background:var(--index);padding:.7rem .6rem;text-align:center}
+.corner .shape{width:2.2rem;height:2.2rem;display:block;margin:0 auto .3rem}
+.corner b{display:block;font:400 1.15rem/1.2 var(--type)}
+.corner span{display:block;font:400 .85rem/1.4 var(--sans);color:var(--muted);margin-top:.25rem}
+.gamehead{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin:2.4rem 0 .8rem}
+.round{font:400 1.1rem/1.2 var(--type)}
+.clockwrap{display:flex;align-items:center;gap:.6rem}
+.clock{min-width:5.2rem;text-align:center;background:var(--board);color:var(--board-ink);font:600 2.3rem/1 var(--mono);padding:.35rem .6rem;border-radius:.25rem;letter-spacing:.05em}
+.clock small{display:block;font:600 .6rem/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--board-dim);margin-bottom:.2rem}
+.clock.zero{animation:buzz .5s steps(2) 3}
+@keyframes buzz{50%{background:var(--board-ink);color:var(--board)}}
+:root[data-theme="contrast"] .clock{border:1.5px solid #fff}
+.claimcard{position:relative;background:var(--index);border:1.5px solid var(--ink);min-height:15rem;display:flex;align-items:center;justify-content:center;padding:2.4rem 1.4rem 1.6rem;box-shadow:6px 6px 0 var(--shadow);background-image:linear-gradient(var(--margin-line),var(--margin-line)),repeating-linear-gradient(transparent 0 calc(2.2rem - 1px),var(--rule) calc(2.2rem - 1px) 2.2rem);background-size:100% 2px,100% 100%;background-position:0 1.6rem,0 1.6rem;background-repeat:no-repeat,repeat}
+.claimcard .claim{font:400 clamp(1.5rem,4.4vw,2.5rem)/1.3 var(--type);text-align:center;margin:0;max-width:34rem}
+.claimcard .num{position:absolute;top:.25rem;left:.7rem;font:400 .95rem var(--type);color:var(--muted)}
+:root[data-theme="contrast"] .claimcard{box-shadow:none;background-image:none}
+.monitor{background:var(--board);color:#f1ece2;border:.5rem solid #3a3633;border-radius:.6rem;padding:1.2rem 1.3rem 1rem;margin-top:1.2rem;box-shadow:6px 6px 0 var(--shadow)}
+.monitor[hidden]{display:none}
+:root[data-theme="contrast"] .monitor{border-color:#fff;color:#fff;box-shadow:none}
+.monitor .tag{display:flex;justify-content:space-between;font:600 .75rem/1.2 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--board-ink);margin:0 0 .8rem}
+.monitor .tag .rec::before{content:"";display:inline-block;width:.6rem;height:.6rem;border-radius:50%;background:#e2382c;margin-right:.4rem;vertical-align:.02rem}
+.verdict{display:flex;align-items:center;justify-content:center;gap:.7rem;margin:.2rem auto 1rem;width:max-content;max-width:100%;padding:.4rem 1rem;border:3px solid var(--board-ink);color:var(--board-ink);transform:rotate(-3deg);font:400 clamp(1.5rem,4vw,2.1rem)/1.1 var(--type);text-transform:uppercase;letter-spacing:.04em}
+.verdict .shape{width:2rem;height:2rem;flex:none}
+.verdict .also{display:block;font:600 .7rem/1.2 var(--mono);letter-spacing:.1em}
+.monitor p{margin:.5rem 0;font-size:1.05em;line-height:1.55}
+.monitor .ask{border-top:1px dashed #6b6560;padding-top:.6rem;margin-top:.9rem}
+.monitor .ask b{color:var(--board-ink);font:600 .75rem var(--mono);letter-spacing:.12em;text-transform:uppercase;display:block}
+.monitor .cites{font:400 .78rem/1.45 var(--sans);color:#cfc8bd;margin-top:.8rem}
+:root[data-theme="contrast"] .monitor .cites{color:#fff}
+.monitor .cites a{color:inherit;word-break:break-word}
+.monitor .cite{margin:0 0 .3rem;padding-left:1.6em;text-indent:-1.6em}
+.monitor.arrive{animation:arrive .45s ease-out both}
+@keyframes arrive{0%{opacity:0;transform:translateY(-.6rem)}100%{opacity:1;transform:none}}
+.row{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin:1.2rem 0}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.done{text-align:center;font:400 1.3rem var(--type)}
+.scores{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.7rem}
+.team{background:var(--card);border:1.5px solid var(--ink);padding:.7rem;text-align:center}
+.team label{display:block;font:600 .72rem/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.team input{width:100%;font:400 1rem var(--type);text-align:center;border:0;border-bottom:1.5px dashed var(--line);background:transparent;color:var(--ink);padding:.15rem}
+.team .pts{display:block;margin:.5rem auto;background:var(--board);color:var(--board-ink);font:600 2rem/1 var(--mono);padding:.35rem 0;border-radius:.2rem}
+:root[data-theme="contrast"] .team .pts{border:1.5px solid #fff}
+.team .adj{display:flex;gap:.3rem;justify-content:center}
+.team .adj button{flex:1;font:700 .9rem/1 var(--sans);padding:.45rem 0;border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:.25rem;cursor:pointer}
+.wrap>h2{display:table;margin:2.6rem auto 1rem;padding:.1rem .6rem;background:var(--paper);font:400 clamp(1.4rem,3.6vw,1.75rem)/1.2 var(--type)}
+.notes{margin:2rem 0;padding:.9rem 1.1rem .6rem;font:400 .9rem/1.55 var(--sans)}
+.notes summary{cursor:pointer;font-weight:700}
+.print-only{display:none}
+@media (max-width:40rem){.corners,.scores{grid-template-columns:repeat(2,minmax(0,1fr))}.claimcard{min-height:12rem}}
+@media print{
+@page{size:letter;margin:.5in}
+body>*:not(main),main>*:not(.print-only){display:none!important}
+.print-only{display:block}
+.sign{height:9.9in;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;break-after:page;color:#000}
+.sign:last-child{break-after:auto}
+.sign .shape{width:4.2in;height:4.2in}
+.sign b{font:400 96pt/1 "Special Elite",Georgia,serif;margin:.2in 0 .15in}
+.sign span{font:400 22pt/1.3 Georgia,serif;max-width:6in}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar"><a href="/librarylyceum/guides.html">WEHS Library Lyceum</a> research guides presents...</div>
+<main id="main"><header class="folder wide"><p class="folder-tab"><svg class="whistle" viewBox="0 0 34 24" aria-hidden="true" focusable="false"><path d="M3 10h13a9 9 0 1 1-9 9v-4H3a2.5 2.5 0 0 1 0-5z" fill="currentColor"/><circle cx="16" cy="19" r="3.2" fill="var(--manila,#ecd49c)"/><path d="M22 4c4 0 7 3 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Full Workout | Gym | One period</p><div class="folder-body"><svg class="court" viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2"><line x1="200" y1="0" x2="200" y2="220"/><circle cx="200" cy="110" r="34"/><circle cx="200" cy="110" r="8"/><rect x="-1" y="70" width="76" height="80"/><path d="M75 82a28 28 0 0 1 0 56"/><path d="M-1 18h28a150 150 0 0 1 0 184h-28"/><rect x="325" y="70" width="76" height="80"/><path d="M325 82a28 28 0 0 0 0 56"/><path d="M401 18h-28a150 150 0 0 0 0 184h28"/></g></svg><div class="label"><h1>Four-Corner Fact Check</h1></div></div></header><div class="wrap"><section class="sheet intro"><p>We divide students into teams (likely 4-5); assigning pinnies would make scoring easier. Teams must move as a unit.</p><p>Four corners: True, False, Unproven, No Idea. I read a claim; teams have twenty seconds to select a corner. Then we go to VAR.</p><div class="corners"><div class="corner"><svg class="shape" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="4"/></svg><b>True</b><span>Backed by evidence.</span></div><div class="corner"><svg class="shape" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M8 8l24 24M32 8L8 32" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/></svg><b>False</b><span>Evidence disputes the claim.</span></div><div class="corner"><svg class="shape" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 5l16 29H4z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></svg><b>Unproven</b><span>Not enough evidence yet OR current studies disagree.</span></div><div class="corner"><svg class="shape" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="7" y="7" width="26" height="26" fill="none" stroke="currentColor" stroke-width="4"/></svg><b>No Idea</b><span>You honestly don’t know. Worth a point.</span></div></div></section><div class="gamehead"><p class="round" id="round" aria-live="polite"></p><div class="clockwrap"><div class="clock" id="clock" role="timer" aria-label="Shot clock"><small>Shot clock</small><span id="clk">20</span></div><button class="btn" type="button" id="go">Start the clock</button></div></div><section class="claimcard" aria-labelledby="claim"><span class="num" id="num"></span><p class="claim" id="claim"></p></section><section class="monitor" id="mon" hidden aria-labelledby="mon-h"><p class="tag"><span class="rec" id="mon-h">VAR review</span><span id="mon-n"></span></p><div class="verdict" id="verdict"></div><div id="vartxt"></div><p class="ask"><b>Ask the room</b><span id="ask"></span></p><div class="cites" id="cites"></div></section><div class="row"><button class="btn ghost" type="button" id="prev">Previous claim</button><button class="btn" type="button" id="var" aria-expanded="false" aria-controls="mon">Go to VAR</button><button class="btn ghost" type="button" id="next">Next claim</button></div><h2 class="boardh">Scoreboard</h2><div class="scores"><div class="team"><label for="tn1">Team 1 name</label><input id="tn1" data-i="0" value="Team 1" autocomplete="off"><span class="pts" id="pts1" aria-live="polite">0</span><div class="adj"><button type="button" data-i="0" data-d="2" aria-label="Team 1 plus 2">+2</button><button type="button" data-i="0" data-d="1" aria-label="Team 1 plus 1">+1</button><button type="button" data-i="0" data-d="-1" aria-label="Team 1 minus 1">−1</button></div></div><div class="team"><label for="tn2">Team 2 name</label><input id="tn2" data-i="1" value="Team 2" autocomplete="off"><span class="pts" id="pts2" aria-live="polite">0</span><div class="adj"><button type="button" data-i="1" data-d="2" aria-label="Team 2 plus 2">+2</button><button type="button" data-i="1" data-d="1" aria-label="Team 2 plus 1">+1</button><button type="button" data-i="1" data-d="-1" aria-label="Team 2 minus 1">−1</button></div></div><div class="team"><label for="tn3">Team 3 name</label><input id="tn3" data-i="2" value="Team 3" autocomplete="off"><span class="pts" id="pts3" aria-live="polite">0</span><div class="adj"><button type="button" data-i="2" data-d="2" aria-label="Team 3 plus 2">+2</button><button type="button" data-i="2" data-d="1" aria-label="Team 3 plus 1">+1</button><button type="button" data-i="2" data-d="-1" aria-label="Team 3 minus 1">−1</button></div></div><div class="team"><label for="tn4">Team 4 name</label><input id="tn4" data-i="3" value="Team 4" autocomplete="off"><span class="pts" id="pts4" aria-live="polite">0</span><div class="adj"><button type="button" data-i="3" data-d="2" aria-label="Team 4 plus 2">+2</button><button type="button" data-i="3" data-d="1" aria-label="Team 4 plus 1">+1</button><button type="button" data-i="3" data-d="-1" aria-label="Team 4 minus 1">−1</button></div></div><div class="team"><label for="tn5">Team 5 name</label><input id="tn5" data-i="4" value="Team 5" autocomplete="off"><span class="pts" id="pts5" aria-live="polite">0</span><div class="adj"><button type="button" data-i="4" data-d="2" aria-label="Team 5 plus 2">+2</button><button type="button" data-i="4" data-d="1" aria-label="Team 5 plus 1">+1</button><button type="button" data-i="4" data-d="-1" aria-label="Team 5 minus 1">−1</button></div></div></div><div class="row"><button class="btn ghost" type="button" id="reset">Reset scores</button><button class="btn ghost" type="button" id="signs">Print corner signs</button></div><details class="notes sticky"><summary>Teacher notes</summary><ul><li>Before class, click the print button above and tape one sign in each corner of the gym.</li><li>Roles: VAR (librarian) reads each claim, starts the shot clock, and runs the review. The Scorekeeper’s Table (PE teacher) splits the class into four teams and awards points: 2 for the right corner, 1 for No Idea.</li><li>Pace: nine claims at about five minutes each. Claim 9, about basketball, is the closer; if time runs short, skip from claim 7 to claim 9.</li><li>Every review ends with a question for the room. One quick answer from a student is sufficient to move on. We’re looking to drill a pair of questions about wellness claims: who tested it and who was tested?</li><li>Claim 8 has two right corners. The research found no useful effect, but it studied only young army recruits.</li><li>Arrow keys move between claims; V opens the review. Scores and team names save on the device you’re using.</li><li>Right corner: 2 points. No Idea: 1 point, because I don’t reward unwarranted confidence. Wrong corner: 0.</li><li>We don’t tell students how the scoring works.</li></ul></details></div><div class="print-only" aria-hidden="true"><div class="sign"><svg class="shape" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="4"/></svg><b>True</b><span>Backed by evidence.</span></div><div class="sign"><svg class="shape" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M8 8l24 24M32 8L8 32" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/></svg><b>False</b><span>Evidence disputes the claim.</span></div><div class="sign"><svg class="shape" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 5l16 29H4z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></svg><b>Unproven</b><span>Not enough evidence yet OR current studies disagree.</span></div><div class="sign"><svg class="shape" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="7" y="7" width="26" height="26" fill="none" stroke="currentColor" stroke-width="4"/></svg><b>No Idea</b><span>You honestly don’t know. Worth a point.</span></div></div></main>
+<footer class="foot"><p class="big">West Essex High School Library Media Center</p><p><a href="/librarylyceum/">WEHS Library Lyceum</a></p></footer>
+<button class="aa-btn" id="aa-btn" type="button" aria-expanded="false" aria-controls="aa-panel"><span aria-hidden="true">Aa</span><span class="sr-only">Reading preferences</span></button>
+<div class="aa-panel" id="aa-panel" role="group" aria-labelledby="aa-title" hidden>
+<h2 id="aa-title">Reading preferences</h2>
+<fieldset><legend>Text size</legend><div class="seg"><button type="button" data-dim="size" data-v="small">Small</button><button type="button" data-dim="size" data-v="medium">Medium</button><button type="button" data-dim="size" data-v="large">Large</button></div></fieldset>
+<fieldset><legend>Theme</legend><div class="seg"><button type="button" data-dim="theme" data-v="light">Light</button><button type="button" data-dim="theme" data-v="dark">Dark</button><button type="button" data-dim="theme" data-v="contrast">High contrast</button></div></fieldset>
+<fieldset><legend>Typeface</legend><div class="seg"><button type="button" data-dim="font" data-v="serif">Serif</button><button type="button" data-dim="font" data-v="sans">Sans</button><button type="button" data-dim="font" data-v="dyslexic">OpenDyslexic</button></div></fieldset>
+</div>
+<script>
+(function(){var d=document.documentElement,K={size:"lyceum-size",theme:"lyceum-theme",font:"lyceum-font"},D={size:"small",theme:"light",font:"serif"},b=document.getElementById("aa-btn"),p=document.getElementById("aa-panel");if(!b||!p)return;
+function cur(k){return d.dataset[k]||D[k]}
+function sync(){p.querySelectorAll("button[data-dim]").forEach(function(x){x.setAttribute("aria-pressed",String(cur(x.dataset.dim)===x.dataset.v))})}
+function set(k,v){if(v===D[k])delete d.dataset[k];else d.dataset[k]=v;try{localStorage.setItem(K[k],v)}catch(e){}sync()}
+function open(){p.hidden=false;b.setAttribute("aria-expanded","true");sync();var f=p.querySelector('button[aria-pressed="true"]');if(f)f.focus()}
+function close(r){p.hidden=true;b.setAttribute("aria-expanded","false");if(r)b.focus()}
+b.addEventListener("click",function(){p.hidden?open():close(false)});
+p.addEventListener("click",function(e){var x=e.target.closest("button[data-dim]");if(x)set(x.dataset.dim,x.dataset.v)});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!p.hidden)close(true)});
+document.addEventListener("click",function(e){if(!p.hidden&&!p.contains(e.target)&&!b.contains(e.target))close(false)});
+sync()})();
+
+</script>
+<script>
+(function(){var D={"cards": [{"id": "F1", "claim": "You lose most of your body heat through your head.", "v": "false", "also": "", "var": "<p>Two pediatricians, Rachel Vreeman and Aaron Carroll, checked the research for the BMJ in 2008. The old figure came from an experiment in which people were bundled up everywhere except their heads, so the head was the only place heat could escape. An Army field manual repeated it as 40 to 45 percent. Any uncovered part of your body loses heat; the head isn’t special.</p>", "ask": "Who participated in the original experiment? What were they wearing?", "src": ["Vreeman, Rachel C., and Aaron E. Carroll. “Festive Medical Myths.” <i>BMJ</i>, vol. 337, 2008, a2769, <a href=\"https://doi.org/10.1136/bmj.a2769\">https://doi.org/10.1136/bmj.a2769</a>.", "“Medical Myths for the Holiday Season: True, False or Unproven?” <i>ScienceDaily</i>, 18 Dec. 2008, <a href=\"https://www.sciencedaily.com/releases/2008/12/081218051243.htm\">www.sciencedaily.com/releases/2008/12/081218051243.htm</a>."]}, {"id": "F2", "claim": "You can get sunburned on a cloudy day.", "v": "true", "also": "", "var": "<p>The Skin Cancer Foundation claims up to 80 percent of the sun’s UV rays can get through clouds. The EPA puts it plainly: even on a cloudy day, you can be sunburned.</p>", "ask": "Two different organizations say the same thing. Why does that matter?", "src": ["“Skin Cancer Myths and Misinformation.” <i>The Skin Cancer Foundation</i>, <a href=\"https://www.skincancer.org/risk-factors/skin-cancer-myths-misinformation/\">www.skincancer.org/risk-factors/skin-cancer-myths-misinformation</a>.", "“Ultraviolet (UV) Radiation and Sun Exposure.” <i>United States Environmental Protection Agency</i>, <a href=\"https://www.epa.gov/radtown/ultraviolet-uv-radiation-and-sun-exposure\">www.epa.gov/radtown/ultraviolet-uv-radiation-and-sun-exposure</a>."]}, {"id": "F3", "claim": "Going out in the cold gives you a cold.", "v": "unproven", "also": "", "var": "<p>Colds come from viruses, and for years experiments found no link between getting cold and catching one. Then, in 2005, researchers at Cardiff University had 90 volunteers sit with their feet in cold water for 20 minutes while 90 others sat with their feet in empty bowls. More of the chilled group reported cold symptoms over the next few days. This is a single study that relies on self-reported data. It’s interesting, but not resolved.</p>", "ask": "What would a second study need to do to arrive at a more conclusive answer?", "src": ["“About Common Cold.” <i>Centers for Disease Control and Prevention</i>, 19 Feb. 2026, <a href=\"https://www.cdc.gov/common-cold/about/index.html\">www.cdc.gov/common-cold/about/index.html</a>.", "Johnson, Claire, and Ronald Eccles. “Acute Cooling of the Feet and the Onset of Common Cold Symptoms.” <i>Family Practice</i>, vol. 22, no. 6, 2005, pp. 608-13, <a href=\"https://doi.org/10.1093/fampra/cmi072\">https://doi.org/10.1093/fampra/cmi072</a>.", "“Feeling a Chill Can Brrrr-ing on a Cold.” <i>HealthDay</i>, 14 Nov. 2005, <a href=\"https://www.healthday.com/health-news/pulmonology/feeling-a-chill-can-brrrr-ing-on-a-cold-529127.html\">www.healthday.com/health-news/pulmonology/feeling-a-chill-can-brrrr-ing-on-a-cold-529127.html</a>."]}, {"id": "F4", "claim": "Sugar makes kids hyper.", "v": "false", "also": "", "var": "<p>At least 12 double-blind trials gave kids sugar or a sugar-free substitute without telling anyone which was which. Not a single study recorded a difference in behavior. Better yet, parents who believed their child had sugar rated the child as more hyperactive even when the drink was sugar-free.</p>", "ask": "Why is it important that nobody knew which subjects received the sugar?", "src": ["Vreeman, Rachel C., and Aaron E. Carroll. “Festive Medical Myths.” <i>BMJ</i>, vol. 337, 2008, a2769, <a href=\"https://doi.org/10.1136/bmj.a2769\">https://doi.org/10.1136/bmj.a2769</a>.", "“Medical Myths for the Holiday Season: True, False or Unproven?” <i>ScienceDaily</i>, 18 Dec. 2008, <a href=\"https://www.sciencedaily.com/releases/2008/12/081218051243.htm\">www.sciencedaily.com/releases/2008/12/081218051243.htm</a>."]}, {"id": "F5", "claim": "Cracking your knuckles gives you arthritis.", "v": "false", "also": "", "var": "<p>Dr. Donald Unger cracked the knuckles of his left hand (and never his right!) for more than 60 years. He found no link and won the 2009 Ig Nobel Prize in Medicine, but a single man is a small study.</p><p>In 2011, a team compared X-rays of more than 200 people’s hands: crackers were no more likely to have arthritis than non-crackers.</p>", "ask": "How many people were in Unger’s study? Why did someone run a bigger one?", "src": ["Srinivasan, Divya. “Ig Nobel Winner Shows Knuckle Cracking Won’t Cause Arthritis.” <i>The Tech</i>, 2 Oct. 2009, <a href=\"https://thetech.com/2009/10/02/ignobels-v129-n41\">thetech.com/2009/10/02/ignobels-v129-n41</a>.", "deWeber, Kevin, et al. “Knuckle Cracking and Hand Osteoarthritis.” <i>Journal of the American Board of Family Medicine</i>, vol. 24, no. 2, 2011, pp. 169-74, <a href=\"https://www.jabfm.org/content/24/2/169\">www.jabfm.org/content/24/2/169</a>."]}, {"id": "F6", "claim": "Lactic acid buildup makes your muscles sore the day after a workout.", "v": "false", "also": "", "var": "<p>Exercise scientists have known since the 1980s that lactic acid doesn’t cause next-day soreness. In one study, runners were sorest after running downhill (when their lactic acid levels were lowest). The soreness comes from infinitesimal muscle damage and the repair work that follows.</p>", "ask": "If lactic acid were the cause, which run should have hurt most?", "src": ["Robergs, Robert Andrew, and Samuel L. Torrens. “Why Are My Muscles Sore after Exercise? Hint: It’s Nothing to Do with Lactic Acid.” <i>The Conversation</i>, 15 Jan. 2024, <a href=\"https://theconversation.com/why-are-my-muscles-sore-after-exercise-hint-its-nothing-to-do-with-lactic-acid-214638\">theconversation.com/why-are-my-muscles-sore-after-exercise-hint-its-nothing-to-do-with-lactic-acid-214638</a>.", "“Science Fact or Science Fiction? Lactic Acid Buildup Causes Muscle Fatigue and Soreness.” <i>Pfizer</i>, <a href=\"https://www.pfizer.com/news/articles/science_fact_or_science_fiction_lactic_acid_buildup_causes_muscle_fatigue_and_soreness\">www.pfizer.com/news/articles/science_fact_or_science_fiction_lactic_acid_buildup_causes_muscle_fatigue_and_soreness</a>."]}, {"id": "F7", "claim": "Your muscles get less sore the second time you do the same hard workout.", "v": "true", "also": "", "var": "<p>Researchers call it the repeated bout effect: after one tough session, the same session causes less damage and soreness the next time. Two exercise physiologists writing in 2024 add a catch: it works best if you don’t wait more than roughly two weeks.</p>", "ask": "What does this card have in common with the lactic acid card?", "src": ["Connolly, Declan A. J., et al. “The Repeated Bout Effect: Does Evidence for a Crossover Effect Exist?” <i>Journal of Sports Science and Medicine</i>, vol. 1, 2002, pp. 80-86, <a href=\"https://www.jssm.org/jssm-01-80.xml-Fulltext\">www.jssm.org/jssm-01-80.xml-Fulltext</a>.", "Robergs, Robert Andrew, and Samuel L. Torrens. “Why Are My Muscles Sore after Exercise? Hint: It’s Nothing to Do with Lactic Acid.” <i>The Conversation</i>, 15 Jan. 2024, <a href=\"https://theconversation.com/why-are-my-muscles-sore-after-exercise-hint-its-nothing-to-do-with-lactic-acid-214638\">theconversation.com/why-are-my-muscles-sore-after-exercise-hint-its-nothing-to-do-with-lactic-acid-214638</a>."]}, {"id": "F8", "claim": "Stretching before exercise prevents injuries.", "v": "false", "also": "unproven", "var": "<p>A 2002 review in the BMJ pooled two large studies of more than 2,600 army recruits. Stretching before exercise made no useful difference in injuries. But everyone studied was a young recruit, so the authors say the finding still needs testing in other groups. VAR rules: False and Unproven both score.</p>", "ask": "Who was studied? Does that include you?", "src": ["Herbert, Robert D., and Michael Gabriel. “Effects of Stretching Before and After Exercising on Muscle Soreness and Risk of Injury: Systematic Review.” <i>BMJ</i>, vol. 325, 2002, p. 468, <a href=\"https://doi.org/10.1136/bmj.325.7362.468\">https://doi.org/10.1136/bmj.325.7362.468</a>.", "Shaughnessy, Allen. “Stretching Ineffective Before Exercise.” <i>American Family Physician</i>, 15 Mar. 2003, <a href=\"https://www.aafp.org/afp/2003/0315/p1333\">www.aafp.org/afp/2003/0315/p1333</a>."]}, {"id": "F9", "claim": "Basketball was invented as an indoor activity for winter.", "v": "true", "also": "", "var": "<p>In December 1891, at a YMCA training school in Springfield, Massachusetts, a restless class was stuck indoors for the winter. Luther Gulick gave James Naismith 14 days to invent an indoor game. Naismith wrote 13 rules; his secretary typed them and tacked them to the gym’s bulletin board. In 2010, those two typed pages sold for $4.3 million. They’re on display at the University of Kansas.</p>", "ask": "The rules survive on paper. What does a document like that prove that a story can’t?", "src": ["“Where Basketball Was Invented: The History of Basketball.” <i>Springfield College</i>, <a href=\"https://springfield.edu/about/birthplace-of-basketball\">springfield.edu/about/birthplace-of-basketball</a>.", "“James Naismith.” <i>Kansapedia</i>, Kansas Historical Society, <a href=\"https://www.kansashistory.gov/index.php?url=kansapedia%2Fjames-naismith%2F12154\">www.kansashistory.gov/index.php?url=kansapedia%2Fjames-naismith%2F12154</a>.", "“Basketball ‘Bible’ Auction Sets Sports Memorabilia Record.” <i>CNN</i>, 10 Dec. 2010, <a href=\"https://edition.cnn.com/2010/SPORT/12/10/basketball.rules.auction/index.html\">edition.cnn.com/2010/SPORT/12/10/basketball.rules.auction/index.html</a>."]}], "names": {"true": "True", "false": "False", "unproven": "Unproven", "noidea": "No Idea"}, "shapes": {"true": "<svg class=\"shape\" viewBox=\"0 0 40 40\" aria-hidden=\"true\" focusable=\"false\"><circle cx=\"20\" cy=\"20\" r=\"14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"/></svg>", "false": "<svg class=\"shape\" viewBox=\"0 0 40 40\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M8 8l24 24M32 8L8 32\" stroke=\"currentColor\" stroke-width=\"4.5\" stroke-linecap=\"round\"/></svg>", "unproven": "<svg class=\"shape\" viewBox=\"0 0 40 40\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M20 5l16 29H4z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linejoin=\"round\"/></svg>", "noidea": "<svg class=\"shape\" viewBox=\"0 0 40 40\" aria-hidden=\"true\" focusable=\"false\"><rect x=\"7\" y=\"7\" width=\"26\" height=\"26\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"/></svg>"}, "ui": {"clock": "Shot clock", "start": "Start the clock", "var_btn": "Go to VAR", "back_btn": "Back to the claim", "next": "Next claim", "prev": "Previous claim", "reset": "Reset scores", "board": "Scoreboard", "team": "Team", "verdict_label": "VAR says", "ask_label": "Ask the room", "also": "Also scores", "done": "Final whistle. Add up the Scoreboard."}},C=D.cards,U=D.ui,K="del-fourcorners-v1",st={i:0,s:[0,0,0,0,0],n:["","","","",""]};
+try{var j=JSON.parse(localStorage.getItem(K)||"null");if(j){st.i=Math.min(j.i||0,C.length-1);if(j.s)j.s.forEach(function(v,k){st.s[k]=v});if(j.n)j.n.forEach(function(v,k){st.n[k]=v})}}catch(e){}
+function save(){try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
+var $=function(id){return document.getElementById(id)},mon=$("mon"),vb=$("var");
+function vword(k){return D.names[k]}
+function show(){var c=C[st.i];$("num").textContent="Claim "+(st.i+1);$("round").textContent="Claim "+(st.i+1)+" of "+C.length;$("claim").innerHTML=c.claim;
+$("mon-n").textContent="Claim "+(st.i+1);$("verdict").innerHTML=D.shapes[c.v]+"<span>"+vword(c.v)+(c.also?'<span class="also">'+U.also+": "+vword(c.also)+"</span>":"")+"</span>";
+$("vartxt").innerHTML=c.var;$("ask").innerHTML=c.ask;$("cites").innerHTML=c.src.map(function(s){return'<p class="cite">'+s+"</p>"}).join("");
+mon.hidden=true;mon.classList.remove("arrive");vb.textContent=U.var_btn;vb.setAttribute("aria-expanded","false");
+$("prev").disabled=st.i===0;$("next").textContent=st.i===C.length-1?U.done.split(".")[0]:U.next;stop();$("clk").textContent="20";save()}
+function flip(){if(mon.hidden){mon.hidden=false;mon.classList.add("arrive");vb.textContent=U.back_btn;vb.setAttribute("aria-expanded","true");stop()}else{mon.hidden=true;vb.textContent=U.var_btn;vb.setAttribute("aria-expanded","false")}}
+var tm=null;function stop(){if(tm){clearInterval(tm);tm=null}$("clock").classList.remove("zero")}
+$("go").addEventListener("click",function(){stop();var n=20;$("clk").textContent=n;tm=setInterval(function(){n--;$("clk").textContent=n;if(n<=0){clearInterval(tm);tm=null;$("clock").classList.add("zero");$("round").textContent="Time! Freeze in your corner."}},1000)});
+vb.addEventListener("click",flip);
+$("prev").addEventListener("click",function(){if(st.i>0){st.i--;show()}});
+$("next").addEventListener("click",function(){if(st.i<C.length-1){st.i++;show()}else{$("round").textContent=U.done}});
+function paint(){for(var i=0;i<5;i++){$("pts"+(i+1)).textContent=st.s[i];if(st.n[i])$("tn"+(i+1)).value=st.n[i]}}
+document.querySelectorAll(".adj button").forEach(function(b){b.addEventListener("click",function(){var i=+b.dataset.i;st.s[i]=Math.max(0,st.s[i]+(+b.dataset.d));paint();save()})});
+document.querySelectorAll(".team input").forEach(function(x){x.addEventListener("input",function(){st.n[+x.dataset.i]=x.value;save()})});
+var rb=$("reset");rb.addEventListener("click",function(){if(rb.dataset.armed!=="1"){rb.dataset.armed="1";rb.textContent="Click again to reset";setTimeout(function(){rb.dataset.armed="";rb.textContent=U.reset},3000);return}st.s=[0,0,0,0,0];st.i=0;rb.dataset.armed="";rb.textContent=U.reset;paint();show()});
+$("signs").addEventListener("click",function(){window.print()});
+document.addEventListener("keydown",function(e){if(/INPUT|TEXTAREA|BUTTON|SUMMARY/.test(e.target.tagName))return;if(e.key==="ArrowRight")$("next").click();else if(e.key==="ArrowLeft")$("prev").click();else if(e.key==="v"||e.key==="V")flip()});
+paint();show()})();
+</script>
+</body>
+</html>

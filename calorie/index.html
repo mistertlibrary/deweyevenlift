@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Calorie Myth | WEHS Library Lyceum</title>
+<meta name="description" content="A one-period Health case: trace the Calorie on a nutrition label back through Atwater&#x27;s lab to a Paris lecture on steam engines.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WEHS Library Lyceum">
+<meta property="og:title" content="The Calorie Myth | WEHS Library Lyceum">
+<meta property="og:description" content="A one-period Health case: trace the Calorie on a nutrition label back through Atwater&#x27;s lab to a Paris lecture on steam engines.">
+<meta property="og:url" content="https://mistertlibrary.github.io/deweyevenlift/calorie/">
+<meta property="og:image" content="https://mistertlibrary.github.io/librarylyceum/og-image.png">
+<link rel="canonical" href="https://mistertlibrary.github.io/deweyevenlift/calorie/">
+<link rel="icon" type="image/svg+xml" href="/librarylyceum/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/librarylyceum/favicon.png">
+<script>
+(function(){try{var d=document.documentElement,t=localStorage.getItem("lyceum-theme"),s=localStorage.getItem("lyceum-size"),f=localStorage.getItem("lyceum-font");if(t==="dark"||t==="contrast")d.dataset.theme=t;if(s==="medium"||s==="large")d.dataset.size=s;if(f==="sans"||f==="dyslexic")d.dataset.font=f}catch(e){}})();
+</script>
+<style>
+@font-face{font-family:"EB Garamond";font-style:normal;font-weight:400 800;font-display:swap;src:url("/librarylyceum/fonts/eb-garamond-400-800.woff2") format("woff2")}
+@font-face{font-family:"EB Garamond";font-style:italic;font-weight:400 800;font-display:swap;src:url("/librarylyceum/fonts/eb-garamond-400-800-italic.woff2") format("woff2")}
+@font-face{font-family:"Libre Franklin";font-style:normal;font-weight:100 900;font-display:swap;src:url("/librarylyceum/fonts/libre-franklin-100-900.woff2") format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-weight:600;font-display:swap;src:url("/librarylyceum/fonts/ibm-plex-mono-600.woff2") format("woff2")}
+@font-face{font-family:"OpenDyslexic";font-weight:400;font-display:swap;src:url("/librarylyceum/fonts/opendyslexic-400.woff2") format("woff2")}
+@font-face{font-family:"OpenDyslexic";font-weight:700;font-display:swap;src:url("/librarylyceum/fonts/opendyslexic-700.woff2") format("woff2")}
+:root,:root[data-theme="light"]{--paper:#f5f1ea;--card:#fffdf9;--ink:#1f1415;--muted:#5b4d4b;--line:#cfc4b8;--accent:#c52122;--accent-ink:#a81b1c;--on-accent:#fff;--band:#2f1414;--on-band:#f5f1ea;--focus:#1f5e7a;--field:#fff;--shadow:#1f1415}
+:root[data-theme="dark"]{--paper:#161112;--card:#211a1b;--ink:#f1e9e6;--muted:#c4b6b2;--line:#4d3f3e;--accent:#ff7466;--accent-ink:#ff8f84;--on-accent:#161112;--band:#0b0808;--on-band:#f1e9e6;--focus:#7cc4e4;--field:#130e0f;--shadow:#000}
+:root[data-theme="contrast"]{--paper:#000;--card:#000;--ink:#fff;--muted:#fff;--line:#fff;--accent:#ffe400;--accent-ink:#ffe400;--on-accent:#000;--band:#000;--on-band:#fff;--focus:#ffe400;--field:#000;--shadow:#000}
+:root{--fs:17px;--serif:"EB Garamond","Iowan Old Style",Palatino,Georgia,serif;--sans:"Libre Franklin","Franklin Gothic Medium",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--body:var(--serif);--display:var(--serif)}
+:root[data-size="medium"]{--fs:19px}
+:root[data-size="large"]{--fs:21.5px}
+:root[data-font="sans"]{--body:var(--sans);--display:var(--sans)}
+:root[data-font="dyslexic"]{--body:"OpenDyslexic",sans-serif;--display:"OpenDyslexic",sans-serif;--sans:"OpenDyslexic",sans-serif;--mono:"OpenDyslexic",monospace;--serif:"OpenDyslexic",sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:1rem}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 var(--fs)/1.6 var(--body);font-variant-numeric:lining-nums}
+:root[data-theme="contrast"] body{background-image:none}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.15;text-align:center;overflow-wrap:break-word;margin:0 0 .5em}
+p,li{overflow-wrap:break-word}
+a{color:var(--accent-ink);text-decoration:underline;text-underline-offset:.15em}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--card);color:var(--ink);padding:.6rem .9rem;border:2px solid var(--focus);font:600 .95rem var(--sans)}
+.skip:focus{left:1rem;top:1rem}
+.topbar{background:var(--band);color:var(--on-band);font:600 .78rem/1.4 var(--sans);text-align:center;padding:.5rem 1rem;letter-spacing:.02em}
+.topbar a{color:var(--on-band)}
+:root[data-theme="contrast"] .topbar{border-bottom:1px solid #fff}
+.foot{max-width:44rem;margin:3rem auto 0;padding:1.2rem 1rem 6rem;border-top:1px solid var(--line);text-align:center;font:400 .85rem/1.55 var(--sans);color:var(--muted)}
+.foot a{color:inherit}
+.foot .big{font:600 1rem/1.4 var(--display);color:var(--ink);margin:0 0 .2rem}
+:root[data-font="dyslexic"] .seg button[data-v="contrast"]{flex-basis:100%}
+.aa-btn{position:fixed;right:calc(1rem + env(safe-area-inset-right));bottom:calc(1rem + env(safe-area-inset-bottom));z-index:60;min-width:3rem;height:3rem;padding:0 .8rem;border-radius:999px;border:2px solid var(--ink);background:var(--card);color:var(--ink);font:700 1.05rem/1 var(--sans);cursor:pointer;box-shadow:3px 3px 0 var(--shadow)}
+.aa-panel{position:fixed;right:calc(1rem + env(safe-area-inset-right));bottom:calc(4.6rem + env(safe-area-inset-bottom));z-index:60;width:min(20rem,calc(100vw - 2rem));max-height:calc(100vh - 6rem);overflow:auto;background:var(--card);color:var(--ink);border:2px solid var(--ink);padding:.9rem 1rem;box-shadow:4px 4px 0 var(--shadow);font-family:var(--sans)}
+.aa-panel[hidden]{display:none}
+.aa-panel h2{font:700 .95rem/1.2 var(--sans);margin:0 0 .6rem}
+.aa-panel fieldset{border:0;margin:0 0 .75rem;padding:0;min-width:0}
+.aa-panel legend{font:700 .72rem/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.35rem;padding:0}
+.seg{display:flex;flex-wrap:wrap;gap:.35rem}
+.seg button{flex:1 1 0;min-width:0;padding:.45rem .35rem;border:1.5px solid var(--ink);border-radius:.3rem;background:transparent;color:var(--ink);font:600 .85rem/1.2 var(--sans);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+:root[data-font="dyslexic"] .seg button{font-size:.72rem}
+:root[data-font="dyslexic"] .seg button[data-v="dyslexic"]{flex-basis:100%}
+:root[data-theme="contrast"] .aa-btn,:root[data-theme="contrast"] .aa-panel{box-shadow:none}
+.btn{display:inline-block;font:700 .95rem/1.2 var(--sans);padding:.65rem 1rem;border:2px solid var(--ink);border-radius:.3rem;background:var(--ink);color:var(--paper);cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print{
+.topbar,.aa-btn,.aa-panel,.skip,.noprint{display:none!important}
+:root,:root[data-theme]{--paper:#fff;--card:#fff;--ink:#000;--muted:#333;--line:#777;--accent:#000;--accent-ink:#000;--on-accent:#fff;--field:#fff;--shadow:#fff}
+body{font-size:11.5pt;background:#fff}
+a{color:#000}
+.foot{padding-bottom:0;margin-top:1.5rem}
+}
+
+@font-face{font-family:"Special Elite";font-weight:400;font-display:swap;src:url("/deweyevenlift/fonts/special-elite-400.woff2") format("woff2")}
+:root,:root[data-theme="light"]{--paper:#eef4f5;--card:#fffdf8;--muted:#4f4442;--line:#b9c9cf;--grid-minor:#d6e5ea;--grid-major:#b7d0d9;--manila:#ecd49c;--manila-edge:#b8954b;--water:#3d8db0;--ring:rgba(61,141,176,.34);--stamp:#b3191a;--index:#fffefb;--rule:#c9dcea;--margin-line:#e7a3a3;--note:#fff1a1;--note-strip:#f4df73;--note-ink:#1f1415;--tape:rgba(255,255,255,.62);--seal:#b3191a;--on-seal:#fff}
+:root[data-theme="dark"]{--paper:#0f2c44;--card:#153a57;--ink:#eef6fb;--muted:#b9cfdd;--line:#4d7898;--accent:#ff8f84;--accent-ink:#ffa39a;--field:#0c2337;--shadow:#06182a;--focus:#ffd56b;--grid-minor:rgba(150,205,240,.10);--grid-major:rgba(150,205,240,.22);--manila:#1f4c6f;--manila-edge:#8cc0de;--water:#6cc6ec;--ring:rgba(108,198,236,.30);--stamp:#ffa39a;--index:#173f5f;--rule:rgba(150,205,240,.22);--margin-line:rgba(255,143,132,.6);--note:#f1df7c;--note-strip:#e2cc5c;--note-ink:#1f1415;--tape:rgba(200,230,250,.22);--seal:#d9473f;--on-seal:#fff}
+:root[data-theme="contrast"]{--grid-minor:transparent;--grid-major:transparent;--manila:#000;--manila-edge:#fff;--water:#ffe400;--ring:transparent;--stamp:#ffe400;--index:#000;--rule:transparent;--margin-line:transparent;--note:#000;--note-strip:#000;--note-ink:#fff;--tape:transparent;--seal:#ffe400;--on-seal:#000}
+:root{--type:"Special Elite",var(--mono)}
+:root[data-font="dyslexic"]{--type:"OpenDyslexic",sans-serif}
+body{background-color:var(--paper);background-image:linear-gradient(var(--grid-major) 1px,transparent 1px),linear-gradient(90deg,var(--grid-major) 1px,transparent 1px),linear-gradient(var(--grid-minor) 1px,transparent 1px),linear-gradient(90deg,var(--grid-minor) 1px,transparent 1px);background-size:60px 60px,60px 60px,12px 12px,12px 12px}
+.folder{max-width:44rem;margin:2.6rem auto 0;padding:0 1rem}
+.folder-tab{display:inline-block;margin:0 0 -1.5px 1.2rem;padding:.45rem 1.1rem .35rem;background:var(--manila);border:1.5px solid var(--manila-edge);border-bottom:0;border-radius:.6rem .6rem 0 0;font:400 .95rem/1.2 var(--type);position:relative;z-index:1}
+.folder-body{position:relative;overflow:hidden;background:var(--manila);border:1.5px solid var(--manila-edge);border-radius:0 .6rem .6rem .6rem;padding:2.2rem 1.4rem 1.8rem;text-align:center;box-shadow:6px 6px 0 var(--manila-edge)}
+.folder-body::after{content:"";position:absolute;width:11rem;height:11rem;right:-2.6rem;top:-3rem;border-radius:50%;pointer-events:none;background:radial-gradient(circle,transparent 61%,var(--ring) 63%,transparent 67%,transparent 71%,var(--ring) 72%,transparent 74%)}
+.label{position:relative;display:inline-block;max-width:100%;background:var(--card);border:1px solid var(--manila-edge);padding:.9rem 1.3rem .8rem;margin:0 0 1.1rem}
+.label::before,.label::after{content:"";position:absolute;top:-.55rem;width:3.2rem;height:1.1rem;background:var(--tape);border:1px solid rgba(0,0,0,.06)}
+.label::before{left:-.9rem;transform:rotate(-24deg)}
+.label::after{right:-.9rem;transform:rotate(24deg)}
+.folder h1{font:400 clamp(1.85rem,6.4vw,2.9rem)/1.12 var(--type);margin:0;letter-spacing:.01em}
+.dek{font-style:italic;color:var(--ink);margin:0;position:relative}
+.sheet{position:relative;background:var(--card);border:1.5px solid var(--ink);padding:1.3rem 1.3rem;margin:2rem 0;box-shadow:5px 5px 0 -1.5px var(--card),5px 5px 0 0 var(--ink),10px 10px 0 -1.5px var(--card),10px 10px 0 0 var(--ink)}
+.clip{position:absolute;top:-1.6rem;left:1.4rem;width:1.5rem;height:4rem;color:var(--muted);transform:rotate(8deg)}
+:root[data-theme="contrast"] .sheet{box-shadow:none}
+:root[data-theme="contrast"] .folder-body{box-shadow:none}
+.sticky{background-color:var(--note);background-image:linear-gradient(var(--note-strip) 0 .55rem,transparent .55rem);color:var(--note-ink)}
+.sticky a{color:inherit}
+:root[data-theme="contrast"] .sticky{border:2px solid #ffe400}
+.typed{font-family:var(--type);font-weight:400}
+:root[data-theme="contrast"] .clip,:root[data-theme="contrast"] .label::before,:root[data-theme="contrast"] .label::after,:root[data-theme="contrast"] .folder-body::after{display:none}
+@media (max-width:34rem){.sheet{padding:1.1rem .9rem;box-shadow:4px 4px 0 -1.5px var(--card),4px 4px 0 0 var(--ink)}.folder-body{padding:1.8rem .9rem 1.4rem}}
+@media print{
+body{background:#fff}
+.clip,.label::before,.label::after,.folder-body::after{display:none!important}
+.folder-body,.sheet,.sticky,.folder-tab,.label{background:#fff!important;box-shadow:none!important}
+.folder-body{border:2px solid #000}
+.folder-tab,.label{border-color:#000!important}
+}
+
+
+:root,:root[data-theme="light"]{--paper:#f6f1e7;--grid-minor:#ebe0cc;--grid-major:#dccaa8;--court:rgba(197,33,34,.2);--board:#1d1b1a;--board-ink:#ffb31f;--board-dim:#b39b66;--tape-a:#fdfdf9;--tape-b:#ecebe2;--net:#5b4d4b}
+:root[data-theme="dark"]{--paper:#13181d;--card:#1c242c;--index:#1f2a33;--grid-minor:rgba(255,190,90,.07);--grid-major:rgba(255,190,90,.15);--court:rgba(255,143,132,.42);--manila:#3a3022;--manila-edge:#c9a86a;--board:#06090c;--board-ink:#ffbf3d;--board-dim:#b39b66;--tape-a:#d9d8cf;--tape-b:#c4c2b6;--net:#c4b6b2;--field:#10161b;--shadow:#05080b;--ring:rgba(255,190,90,.22)}
+:root[data-theme="contrast"]{--court:#fff;--board:#000;--board-ink:#ffe400;--board-dim:#fff;--tape-a:#000;--tape-b:#000;--net:#fff}
+.folder-body::after,.file-body::after{display:none}
+.court{position:absolute;inset:0;width:100%;height:100%;color:var(--court);pointer-events:none}
+:root[data-theme="contrast"] .court{display:none}
+.folder-body>*:not(.court){position:relative}
+.whistle{display:inline-block;width:1.35em;height:1em;vertical-align:-.12em;margin-right:.35em}
+.plate{display:flex;justify-content:space-between;align-items:baseline;gap:.6rem;margin:.45rem 0 0;padding:.35rem .6rem;background:var(--board);color:var(--board-ink);font:600 .8rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;border-radius:.2rem}
+.plate b{font:600 1.05rem/1 var(--mono);letter-spacing:.06em;text-shadow:0 0 .5em color-mix(in srgb,var(--board-ink) 45%,transparent)}
+:root[data-theme="contrast"] .plate{border:1.5px solid #fff}
+:root[data-theme="contrast"] .plate b{text-shadow:none}
+.tape{position:relative;color:#1f1415;background-color:var(--tape-a);background-image:repeating-linear-gradient(90deg,transparent 0 3px,var(--tape-b) 3px 4px),repeating-linear-gradient(0deg,transparent 0 3px,var(--tape-b) 3px 4px);clip-path:polygon(2% 0,98% 0,100% 15%,98% 30%,100% 45%,98% 60%,100% 75%,98% 90%,100% 100%,0 100%,2% 85%,0 70%,2% 55%,0 40%,2% 25%,0 10%);transform:rotate(-1.2deg);box-shadow:none}
+.tape a{color:inherit}
+:root[data-theme="dark"] .tape{color:#1f1415}
+:root[data-theme="contrast"] .tape{color:#fff;clip-path:none;transform:none;border:2px solid #ffe400}
+.wrap>h2{border-bottom:3px double var(--court)}
+:root[data-theme="contrast"] .wrap>h2{border-bottom-color:#fff}
+@media print{
+.court,.whistle{display:none!important}
+.plate{background:#fff!important;color:#000!important;border:1.5px solid #000;text-shadow:none}
+.plate b{text-shadow:none!important}
+.tape{clip-path:none!important;transform:none!important;background:#fff!important;border:2px solid #000}
+.wrap>h2{border-bottom-color:#000}
+}
+
+.wrap{max-width:50rem;margin:0 auto;padding:0 1rem}
+.folder.wide{max-width:50rem}
+.folder.wide h1{font-size:clamp(2.2rem,7vw,3.4rem)}
+.brief{font-size:1.08em;text-align:center}
+.brief p{margin:0}
+.map{display:grid;grid-template-columns:repeat(4,1fr);margin:1.6rem 0 .4rem;position:relative;list-style:none;padding:0}
+.map::before{content:"";position:absolute;left:12.5%;right:12.5%;top:.7rem;border-top:3px solid var(--ink)}
+.map li{text-align:center;position:relative;font:400 .9rem/1.3 var(--type)}
+.map li::before{content:"";display:block;width:1.1rem;height:1.1rem;margin:.15rem auto .35rem;border-radius:50%;border:3px solid var(--ink);background:var(--paper)}
+.map li.open::before{background:var(--ink)}
+.map small{display:block;font:600 .7rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ex{margin:2.6rem 0}
+.ex-tab{display:inline-block;margin:0 0 -1.5px 1rem;padding:.4rem .9rem .3rem;background:var(--manila);border:1.5px solid var(--manila-edge);border-bottom:0;border-radius:.55rem .55rem 0 0;font:400 .95rem/1.2 var(--type);position:relative;z-index:1}
+.ex-body{background:var(--card);border:1.5px solid var(--ink);padding:1.3rem 1.3rem 1rem;box-shadow:5px 5px 0 var(--shadow)}
+:root[data-theme="contrast"] .ex-body{box-shadow:none}
+.ex-body h2{font:400 1.6rem/1.2 var(--type);margin:0 0 .8rem}
+.vis{margin:1rem auto;max-width:22rem;color:var(--ink);text-align:center}
+.vis figcaption{font:400 .8rem/1.4 var(--sans);color:var(--muted);margin-top:.35rem}
+.vis svg{width:100%;height:auto}
+.nf{border:2px solid var(--ink);padding:.3rem .6rem .4rem;text-align:left;font:400 .95rem/1.35 var(--sans);background:var(--field);color:var(--ink);max-width:15rem;margin:0 auto}
+.nf p{margin:0}
+.nf-h{font:900 1.7rem/1.1 var(--sans);border-bottom:1px solid var(--ink);padding-bottom:.15rem}
+.nf-s{border-bottom:8px solid var(--ink);padding:.15rem 0 .25rem}
+.nf-cal{display:flex;justify-content:space-between;align-items:baseline;border-bottom:4px solid var(--ink);padding:.2rem 0;font:900 1.4rem/1 var(--sans)}
+.nf-r{border-bottom:1px solid var(--ink);padding:.18rem 0}
+.nf-r.last{border-bottom:0}
+.mag{display:block;border:3px double var(--ink);padding:.9rem 1rem;background:var(--index)}
+.mag span{display:block}
+.mag-k{font:600 .75rem/1.2 var(--mono);letter-spacing:.2em}
+.mag-t{font:700 1.5rem/1.15 var(--serif);font-variant:small-caps;letter-spacing:.04em;margin:.25rem 0}
+.mag-a{font:italic 400 .95rem/1.3 var(--serif)}
+.q{font-weight:700;margin:1rem 0 .3rem}
+.hint{font:400 .92rem/1.5 var(--sans);margin:.3rem 0}
+.hint summary{cursor:pointer;font-weight:700}
+.talk{padding:.9rem 1rem .7rem;margin:1rem 0;font-size:.98em}
+.talk b{display:block;font:600 .72rem var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.lock{display:flex;flex-wrap:wrap;gap:.6rem;align-items:flex-end;margin:1rem 0 .4rem;padding-top:.9rem;border-top:1px dashed var(--line)}
+.lock label{flex-basis:100%;font:600 .8rem var(--sans)}
+.lock input{font:400 1.5rem/1 var(--mono);width:8rem;padding:.35rem .5rem;border:2px solid var(--ink);background:var(--field);color:var(--ink);letter-spacing:.12em}
+.msg{flex-basis:100%;min-height:1.4em;margin:.2rem 0 0;font:600 .9rem var(--sans);color:var(--accent-ink)}
+.stamp{display:inline-block;margin:.6rem 0 0;padding:.2rem .8rem;border:3px solid var(--stamp);color:var(--stamp);font:400 1.4rem var(--type);text-transform:uppercase;transform:rotate(-6deg)}
+.cites{font:400 .78rem/1.45 var(--sans);color:var(--muted);margin-top:1rem}
+.cites a{color:inherit;word-break:break-word}
+.cite{margin:0 0 .3rem;padding-left:1.6em;text-indent:-1.6em}
+.sealed{margin:2.6rem 0;padding:1.6rem 1rem;text-align:center;background:var(--manila);border:1.5px solid var(--manila-edge);font:400 1.05rem/1.4 var(--type)}
+.sealed[hidden],.ex[hidden],#verdict[hidden],.lock[hidden],.solved[hidden]{display:none}
+.ex.arrive{animation:arrive .45s ease-out both}
+@keyframes arrive{0%{opacity:0;transform:translateY(-.8rem)}100%{opacity:1;transform:none}}
+#verdict h2{font:400 1.7rem var(--type)}
+.kicker{font:400 clamp(1.3rem,3.6vw,1.8rem)/1.35 var(--type);text-align:center;margin:.4rem 0 1.2rem}
+.exit ol{padding-left:1.4rem}
+.exit textarea{width:100%;min-height:5rem;font:inherit;padding:.5rem;border:1.5px solid var(--line);background:var(--field);color:var(--ink);margin:.3rem 0 .6rem}
+.row{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin:1.2rem 0}
+@media print{
+@page{size:letter;margin:.5in}
+.lock button,.row,.hint,.sealed,.map{display:none!important}
+.ex{break-inside:avoid;margin:.2in 0}
+.ex-body{box-shadow:none;border:1.5px solid #000}
+.ex-tab{background:#fff!important;border-color:#000}
+.talk{border:1px solid #000}
+.exit textarea{border:1px solid #000;min-height:1.2in}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar"><a href="/librarylyceum/guides.html">WEHS Library Lyceum</a> research guides presents...</div>
+<main id="main"><header class="folder wide"><p class="folder-tab"><svg class="whistle" viewBox="0 0 34 24" aria-hidden="true" focusable="false"><path d="M3 10h13a9 9 0 1 1-9 9v-4H3a2.5 2.5 0 0 1 0-5z" fill="currentColor"/><circle cx="16" cy="19" r="3.2" fill="var(--manila,#ecd49c)"/><path d="M22 4c4 0 7 3 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Full Workout | Health | One period</p><div class="folder-body"><svg class="court" viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2"><line x1="200" y1="0" x2="200" y2="220"/><circle cx="200" cy="110" r="34"/><circle cx="200" cy="110" r="8"/><rect x="-1" y="70" width="76" height="80"/><path d="M75 82a28 28 0 0 1 0 56"/><path d="M-1 18h28a150 150 0 0 1 0 184h-28"/><rect x="325" y="70" width="76" height="80"/><path d="M325 82a28 28 0 0 0 0 56"/><path d="M401 18h-28a150 150 0 0 0 0 184h28"/></g></svg><div class="label"><h1>The Calorie Myth</h1></div></div></header><div class="wrap"><section class="sheet brief"><p>Every nutrition label in the United States lists (and leads with!) Calories. Where did that number come from? Work backward through four exhibits from the present to 1819 to find out. Solve each to open the next.</p></section><ol class="map" aria-label="Case map"><li id="mA"><small>Exhibit A</small>Today</li><li id="mB"><small>Exhibit B</small>1896</li><li id="mC"><small>Exhibit C</small>1887</li><li id="mD"><small>Exhibit D</small>1819</li></ol><section class="ex" id="exA" data-i="0" aria-labelledby="hA"><span class="ex-tab">Exhibit A | Today</span><div class="ex-body"><h2 id="hA">The Label</h2><p>Here’s a sample label for a granola bar. The Calories on a label can be calculated from its grams of protein, carbohydrate, and fat, using three numbers called Atwater factors: 4 Calories per gram of protein, 4 per gram of carbohydrate, and 9 per gram of fat.</p><figure class="vis"><div class="nf" role="img" aria-label="Sample Nutrition Facts label: 1 bar; Calories left blank; total fat 10 grams; total carbohydrate 25 grams; protein 5 grams"><p class="nf-h">Nutrition Facts</p><p class="nf-s">Serving size <b>1 bar</b></p><p class="nf-cal"><span>Calories</span><b>?</b></p><p class="nf-r"><b>Total Fat</b> 10 g</p><p class="nf-r"><b>Total Carbohydrate</b> 25 g</p><p class="nf-r last"><b>Protein</b> 5 g</p></div><figcaption>Sample label for this case, not a real product.</figcaption></figure><p class="q">Use the Atwater factors to calculate the bar’s Calories.</p><details class="hint"><summary>Hint</summary><p>(protein × 4) + (carbs × 4) + (fat × 9)</p></details><form class="lock" data-i="0" novalidate><label for="inA">Lock code for Exhibit A</label><input id="inA" inputmode="numeric" autocomplete="off"><button class="btn" type="submit">Try the code</button><p class="msg" role="status"></p></form><p class="solved" hidden><span class="stamp">Solved</span></p><div class="cites"><p class="cite">Food and Agriculture Organization of the United Nations. “Calculation of the Energy Content of Foods: Energy Conversion Factors.” <i>Food Energy: Methods of Analysis and Conversion Factors</i>, FAO, 2003, <a href="https://www.fao.org/4/y5022e/y5022e04.htm">www.fao.org/4/y5022e/y5022e04.htm</a>.</p><p class="cite">Bliss, Rosalie Marion. “An Improved Method to Estimate Calories.” <i>Agricultural Research</i>, USDA Agricultural Research Service, Sept. 2013, <a href="https://agresearchmag.ars.usda.gov/2013/sep/calories/">agresearchmag.ars.usda.gov/2013/sep/calories</a>.</p></div></div></section><p class="sealed" id="sealB">Exhibit B is sealed. Solve Exhibit A to open it.</p><section class="ex" id="exB" data-i="1" aria-labelledby="hB"><span class="ex-tab">Exhibit B | 1896</span><div class="ex-body"><h2 id="hB">The Box</h2><p>So, where did the 4, 9, and 4 come from? In 1896, Wilbur Olin Atwater, a chemist at Wesleyan University in Connecticut, began a series of nearly 500 experiments with his team. Each relied on a sealed chamber in the university’s Judd Hall.</p><p>A volunteer lived inside for days at a time while the team measured the oxygen going in, carbon dioxide coming out, and heat the volunteer’s body gave off.</p><figure class="vis"><svg viewBox="0 0 320 170" role="img" aria-label="Sketch of a sealed chamber with a window; oxygen piped in, carbon dioxide piped out, heat measured"><g fill="none" stroke="currentColor" stroke-width="2.5"><rect x="90" y="25" width="140" height="120" rx="4"/><rect x="135" y="50" width="50" height="38"/><path d="M20 60h70M230 60h70M230 115h70"/><path d="M80 55l10 5-10 5M300 55l10 5-10 5M300 110l10 5-10 5"/></g><g fill="currentColor" font-family="Arial,sans-serif" font-size="13" text-anchor="middle"><text x="48" y="50">oxygen in</text><text x="268" y="50">CO₂ out</text><text x="268" y="105">heat out</text><text x="160" y="125">volunteer inside</text><text x="160" y="164">a sketch, not a diagram of the real chamber</text></g></svg></figure><p class="q">Nearly 500 experiments over about ten years: about how many experiments a year is that?</p><div class="talk sticky"><b>Talk it over</b>Why put a whole person in a box instead of just burning the food and measuring the heat?</div><form class="lock" data-i="1" novalidate><label for="inB">Lock code for Exhibit B</label><input id="inB" inputmode="numeric" autocomplete="off"><button class="btn" type="submit">Try the code</button><p class="msg" role="status"></p></form><p class="solved" hidden><span class="stamp">Solved</span></p><div class="cites"><p class="cite">“Historical Row: Counting Calories.” <i>Wesleyan University Magazine</i>, 20 Sept. 2004, <a href="https://magazine.blogs.wesleyan.edu/2004/09/20/historical-row-counting-calories">magazine.blogs.wesleyan.edu/2004/09/20/historical-row-counting-calories</a>.</p><p class="cite">McSweegan, Edward. “Calorie Counting Gets Its Start in Connecticut.” <i>New England Historical Society</i>, <a href="https://newenglandhistoricalsociety.com/calorie-counting-gets-its-start-in-connecticut/">newenglandhistoricalsociety.com/calorie-counting-gets-its-start-in-connecticut</a>.</p></div></div></section><p class="sealed" id="sealC">Exhibit C is sealed. Solve Exhibit B to open it.</p><section class="ex" id="exC" data-i="2" aria-labelledby="hC"><span class="ex-tab">Exhibit C | 1887</span><div class="ex-body"><h2 id="hC">The Magazine</h2><p>Before he stuck some poor sap in a box, Atwater had to explain his unit of choice to the public. In 1887, he introduced the Calorie to American readers in The Century Magazine.</p><p>He defined it as the heat that would raise a kilogram of water one degree, and he also put it in terms of work: one Calorie is about 1.53 foot-tons, the work of lifting a ton about a foot and a half.</p><figure class="vis"><div class="mag" role="img" aria-label="Masthead: The Century Magazine, 1887"><span class="mag-k">1887</span><span class="mag-t">The Century Magazine</span><span class="mag-a">W. O. Atwater, “The Potential Energy of Food”</span></div></figure><p class="q">How many foot-tons is the granola bar’s 210 Calories? Round your answer to the nearest whole number.</p><details class="hint"><summary>Hint</summary><p>calories × 1.53</p></details><div class="talk sticky"><b>Talk it over</b>Those foot-tons assume perfect efficiency. Is a human body perfectly efficient?</div><form class="lock" data-i="2" novalidate><label for="inC">Lock code for Exhibit C</label><input id="inC" inputmode="numeric" autocomplete="off"><button class="btn" type="submit">Try the code</button><p class="msg" role="status"></p></form><p class="solved" hidden><span class="stamp">Solved</span></p><div class="cites"><p class="cite">Hargrove, James L. “Does the History of Food Energy Units Suggest a Solution to ‘Calorie Confusion’?” <i>Nutrition Journal</i>, vol. 6, 2007, article 44, <a href="https://doi.org/10.1186/1475-2891-6-44">https://doi.org/10.1186/1475-2891-6-44</a>.</p><p class="cite">“How Counting Calories Became a Science.” <i>IEEE Spectrum</i>, <a href="https://spectrum.ieee.org/how-counting-calories-became-a-science">spectrum.ieee.org/how-counting-calories-became-a-science</a>.</p></div></div></section><p class="sealed" id="sealD">Exhibit D is sealed. Solve Exhibit C to open it.</p><section class="ex" id="exD" data-i="3" aria-labelledby="hD"><span class="ex-tab">Exhibit D | 1819</span><div class="ex-body"><h2 id="hD">The Steam Engine</h2><p>Atwater didn’t invent the Calorie. In 1819, Nicolas Clément was teaching industrial chemistry at the Conservatoire des Arts et Métiers in Paris. He needed a unit of heat to explain how steam engines turn heat into work.</p><p>His Calorie measured the heat needed to warm a kilogram of water from 0 to 1 °C. Today, scientists measure energy in joules instead. One Calorie equals 4.184 kilojoules.</p><figure class="vis"><svg viewBox="0 0 320 170" role="img" aria-label="Sketch of a steam engine: firebox, boiler, piston, and flywheel"><g fill="none" stroke="currentColor" stroke-width="2.5"><rect x="30" y="70" width="110" height="60" rx="30"/><rect x="40" y="130" width="90" height="20"/><path d="M140 100h40"/><rect x="180" y="85" width="50" height="30"/><path d="M230 100h20"/><circle cx="275" cy="100" r="34"/><circle cx="275" cy="100" r="5"/><path d="M250 100l25-24"/><path d="M60 70c-6-14 8-18 2-32M90 70c-6-14 8-18 2-32"/></g><g fill="currentColor" font-family="Arial,sans-serif" font-size="13" text-anchor="middle"><text x="85" y="166">fire heats water</text><text x="250" y="160">steam does work</text></g></svg></figure><p class="q">Convert the bar’s 210 Calories to kilojoules. Round to the nearest whole number.</p><details class="hint"><summary>Hint</summary><p>calories × 4.184</p></details><form class="lock" data-i="3" novalidate><label for="inD">Lock code for Exhibit D</label><input id="inD" inputmode="numeric" autocomplete="off"><button class="btn" type="submit">Try the code</button><p class="msg" role="status"></p></form><p class="solved" hidden><span class="stamp">Solved</span></p><div class="cites"><p class="cite">“How Counting Calories Became a Science.” <i>IEEE Spectrum</i>, <a href="https://spectrum.ieee.org/how-counting-calories-became-a-science">spectrum.ieee.org/how-counting-calories-became-a-science</a>.</p><p class="cite">Hargrove, James L. “Does the History of Food Energy Units Suggest a Solution to ‘Calorie Confusion’?” <i>Nutrition Journal</i>, vol. 6, 2007, article 44, <a href="https://doi.org/10.1186/1475-2891-6-44">https://doi.org/10.1186/1475-2891-6-44</a>.</p><p class="cite">Food and Agriculture Organization of the United Nations. “Calculation of the Energy Content of Foods: Energy Conversion Factors.” <i>Food Energy: Methods of Analysis and Conversion Factors</i>, FAO, 2003, <a href="https://www.fao.org/4/y5022e/y5022e04.htm">www.fao.org/4/y5022e/y5022e04.htm</a>.</p></div></div></section><section id="verdict" class="sheet" hidden aria-labelledby="vh"><h2 id="vh">The Verdict</h2><p class="kicker">The calorie was never designed to count your lunch; it was designed to measure a steam engine.</p><div class="exit"><h3>Exit ticket</h3><ol><li><label for="x0">Put the four exhibits in order, oldest first.</label><textarea id="x0" data-k="0"></textarea></li><li><label for="x1">The Calories on a label are a calculation. Name one thing a calculation like that might miss.</label><textarea id="x1" data-k="1"></textarea></li></ol></div><div class="row"><button class="btn" type="button" id="pr">Print my work</button><button class="btn ghost" type="button" id="rs">Start over</button></div></section></div></main>
+<footer class="foot"><p class="big">West Essex High School Library Media Center</p><p><a href="/librarylyceum/">WEHS Library Lyceum</a></p></footer>
+<button class="aa-btn" id="aa-btn" type="button" aria-expanded="false" aria-controls="aa-panel"><span aria-hidden="true">Aa</span><span class="sr-only">Reading preferences</span></button>
+<div class="aa-panel" id="aa-panel" role="group" aria-labelledby="aa-title" hidden>
+<h2 id="aa-title">Reading preferences</h2>
+<fieldset><legend>Text size</legend><div class="seg"><button type="button" data-dim="size" data-v="small">Small</button><button type="button" data-dim="size" data-v="medium">Medium</button><button type="button" data-dim="size" data-v="large">Large</button></div></fieldset>
+<fieldset><legend>Theme</legend><div class="seg"><button type="button" data-dim="theme" data-v="light">Light</button><button type="button" data-dim="theme" data-v="dark">Dark</button><button type="button" data-dim="theme" data-v="contrast">High contrast</button></div></fieldset>
+<fieldset><legend>Typeface</legend><div class="seg"><button type="button" data-dim="font" data-v="serif">Serif</button><button type="button" data-dim="font" data-v="sans">Sans</button><button type="button" data-dim="font" data-v="dyslexic">OpenDyslexic</button></div></fieldset>
+</div>
+<script>
+(function(){var d=document.documentElement,K={size:"lyceum-size",theme:"lyceum-theme",font:"lyceum-font"},D={size:"small",theme:"light",font:"serif"},b=document.getElementById("aa-btn"),p=document.getElementById("aa-panel");if(!b||!p)return;
+function cur(k){return d.dataset[k]||D[k]}
+function sync(){p.querySelectorAll("button[data-dim]").forEach(function(x){x.setAttribute("aria-pressed",String(cur(x.dataset.dim)===x.dataset.v))})}
+function set(k,v){if(v===D[k])delete d.dataset[k];else d.dataset[k]=v;try{localStorage.setItem(K[k],v)}catch(e){}sync()}
+function open(){p.hidden=false;b.setAttribute("aria-expanded","true");sync();var f=p.querySelector('button[aria-pressed="true"]');if(f)f.focus()}
+function close(r){p.hidden=true;b.setAttribute("aria-expanded","false");if(r)b.focus()}
+b.addEventListener("click",function(){p.hidden?open():close(false)});
+p.addEventListener("click",function(e){var x=e.target.closest("button[data-dim]");if(x)set(x.dataset.dim,x.dataset.v)});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!p.hidden)close(true)});
+document.addEventListener("click",function(e){if(!p.hidden&&!p.contains(e.target)&&!b.contains(e.target))close(false)});
+sync()})();
+
+</script>
+<script>
+(function(){var D={"codes": ["210", "50", "321", "879"], "wrong": "Not yet. Check your math and try again.", "reset": "Start over"},K="del-calorie-v1",st={open:0,x:{}},n=D.codes.length;
+try{var j=JSON.parse(localStorage.getItem(K)||"null");if(j)st=j}catch(e){}
+if(/[?&]view=all/.test(location.search))st.open=n;
+function save(){try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
+var ex=document.querySelectorAll(".ex"),ids=["A","B","C","D"];
+function paint(arrive){ex.forEach(function(s,i){var was=s.hidden;s.hidden=i>st.open;if(arrive&&was&&!s.hidden)s.classList.add("arrive");var done=i<st.open;s.querySelector(".solved").hidden=!done;s.querySelector(".lock").hidden=done});
+ids.forEach(function(id,i){var sl=document.getElementById("seal"+id);if(sl)sl.hidden=i<=st.open||i!==st.open+1;var m=document.getElementById("m"+id);m.classList.toggle("open",i<=st.open)});
+document.getElementById("verdict").hidden=st.open<n}
+document.querySelectorAll(".lock").forEach(function(f){f.addEventListener("submit",function(e){e.preventDefault();var i=+f.dataset.i,v=f.querySelector("input").value.replace(/[\s,]/g,"").toLowerCase(),m=f.querySelector(".msg");
+if(v==="var"){st.open=n;save();paint(true);return}
+if(v===D.codes[i]){st.open=Math.max(st.open,i+1);save();paint(true);m.textContent="";var nx=ex[i+1]||document.getElementById("verdict");if(nx)nx.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth",block:"start"})}else{m.textContent=D.wrong}})});
+document.querySelectorAll(".exit textarea").forEach(function(x){x.value=(st.x||{})[x.dataset.k]||"";x.addEventListener("input",function(){st.x=st.x||{};st.x[x.dataset.k]=x.value;save()})});
+document.getElementById("pr").addEventListener("click",function(){window.print()});
+var rb=document.getElementById("rs");rb.addEventListener("click",function(){if(rb.dataset.armed!=="1"){rb.dataset.armed="1";rb.textContent="Click again to start over";setTimeout(function(){rb.dataset.armed="";rb.textContent=D.reset},3000);return}st={open:0,x:{}};save();document.querySelectorAll(".exit textarea").forEach(function(x){x.value=""});document.querySelectorAll(".lock input").forEach(function(x){x.value=""});rb.dataset.armed="";rb.textContent=D.reset;paint(false);window.scrollTo(0,0)});
+paint(false)})();
+</script>
+</body>
+</html>
